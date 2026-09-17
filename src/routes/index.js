@@ -15,6 +15,8 @@ import imageRoutes from './image.js';
 import iconRoutes from './icon.js';
 import customResponseRoutes from './custom-response.js';
 import ipRoutes from './ip.js';
+import twoFactorRoutes from './2fa.js';
+import webhookRoutes from './webhook.js';
 import redirectRoutes from './redirect.js';
 
 const router = Router();
@@ -40,6 +42,8 @@ router.use(['/image', '/i'], imageRoutes);
 router.use('/icon', iconRoutes);
 router.use('/c', customResponseRoutes);
 router.use('/ip', ipRoutes);
+router.use(['/2fa', '/totp'], twoFactorRoutes);
+router.use('/webhook', webhookRoutes);
 
 // redirect other routes
 router.use('/', redirectRoutes);

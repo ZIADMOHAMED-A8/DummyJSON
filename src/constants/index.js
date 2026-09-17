@@ -11,6 +11,9 @@ export const OPTIONAL_ENV_VARIABLES = [
   'LOG_ENABLED',
   'BANNER_CONTENT',
   'STATS',
+  'SPONSORS_CONTENT',
+  'CLOUDFLARE_API_TOKEN',
+  'CLOUDFLARE_ZONE_ID',
 ];
 
 export const requestWhitelist = ['/favicon.ico', '/static', '/public', '/fav.png'];
@@ -27,3 +30,4 @@ export const allowedImageTypes = Object.keys(imageMimeTypes);
 export const maxTokenExpireMins = 30 * 24 * 60;
 
 export const customResponseExpiresInDays = 90;
+export const webhookExpiresInDays = 1;
